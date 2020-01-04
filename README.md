@@ -6,6 +6,19 @@ image classification for weather
 
 test accuracy: 84.73%
 
+dataset directory structure:  
+processed_images  
+|---train  
+....|---cloudy  
+....|---foggy  
+....|---rain  
+....|---snow  
+....|---sunny  
+|---validation  
+....|---similar to within train dir  
+|---test  
+....|---similar to within train dir  
+
 ## data source
 
 Wei-Ta Chu, Xiang-You Zheng, and Ding-Shiuan Ding, "Camera as Weather Sensor: Estimating Weather Information from Single Images," Journal of Visual Communications and Image Representation, vol. 46, pp. 233-249, 2017.
