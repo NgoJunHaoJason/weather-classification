@@ -17,15 +17,12 @@ train_data_path = os.path.join(DATASET_BASE_PATH, 'processed_images/train')
 train_data = get_train_data(train_data_path)
 
 validation_data_path = os.path.join(DATASET_BASE_PATH, 'processed_images/validation')
-validation_data = get_validation_data(validation_data_path)
+validation_data = get_val_or_test_data(validation_data_path)
 # finish getting training dataset
 
 model = tf.keras.models.load_model(MODEL_RELATIVE_PATH)
 base_model = model.layers[0]
 base_model.trainable = True
-
-# Let's take a look to see how many layers are in the base model
-print("Number of layers in the base model: ", len(base_model.layers))
 
 # Fine tune from this layer onwards
 fine_tune_at = 100

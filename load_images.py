@@ -65,13 +65,13 @@ def get_train_data(train_data_path):
     return train_batches
 
 
-def get_validation_data(validation_data_path):
-    validation_list = tf.data.Dataset.list_files(validation_data_path + '/*/*')
-    labeled_validation = validation_list.map(
+def get_val_or_test_data(val_or_test_data_path):
+    val_or_test_list = tf.data.Dataset.list_files(val_or_test_data_path + '/*/*')
+    labeled_val_or_test = val_or_test_list.map(
         process_path, 
         num_parallel_calls=tf.data.experimental.AUTOTUNE
     )
-    validation_batches = labeled_validation.batch(BATCH_SIZE)
-    validation_batches = validation_batches.prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+    val_or_test_batches = labeled_val_or_test.batch(BATCH_SIZE)
+    val_or_test_batches = val_or_test_batches.prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
 
-    return validation_batches
+    return val_or_test_batches

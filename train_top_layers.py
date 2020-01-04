@@ -16,7 +16,7 @@ train_data_path = os.path.join(DATASET_BASE_PATH, 'processed_images/train')
 train_data = get_train_data(train_data_path)
 
 validation_data_path = os.path.join(DATASET_BASE_PATH, 'processed_images/validation')
-validation_data = get_validation_data(validation_data_path)
+validation_data = get_val_or_test_data(validation_data_path)
 # finish getting training dataset
 
 # set up model
