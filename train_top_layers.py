@@ -36,24 +36,18 @@ model = tf.keras.Sequential([
     prediction_layer
 ])
 
-base_learning_rate = 0.0001
 model.compile(
-    optimizer=tf.keras.optimizers.RMSprop(lr=base_learning_rate),
+    optimizer=tf.keras.optimizers.RMSprop(lr=BASE_LEARNING_RATE),
     loss='categorical_crossentropy',
     metrics=['accuracy']
 )
 # finish setting up model
 
-initial_epochs = 10
-# num_train = len(list(train_data))
-# steps_per_epoch = round(num_train)//BATCH_SIZE
-validation_steps = 20
+model.evaluate(validation_data, steps=VALIDATION_STEPS)
 
-model.evaluate(validation_data, steps = validation_steps)
-
-history = model.fit(
+model.fit(
     train_data,
-    epochs=initial_epochs,
+    epochs=INITIAL_EPOCHS,
     validation_data=validation_data,
 )
 
