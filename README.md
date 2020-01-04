@@ -27,3 +27,10 @@ DOI information: 10.1016/j.jvcir.2017.04.002
 - [abstract](http://dx.doi.org/10.1016/j.jvcir.2017.04.002)
 - [website](https://www.cs.ccu.edu.tw/~wtchu/projects/Weather/index.html)
 - [full paper](https://www.cs.ccu.edu.tw/~wtchu/papers/2017JVCI-chu.pdf)
+
+## resources
+
+- [transfer learning](https://www.tensorflow.org/tutorials/images/transfer_learning)
+- [load images](https://www.tensorflow.org/tutorials/load_data/images)
+- [save and load models](https://www.tensorflow.org/tutorials/keras/save_and_load)
+- [image classification](https://www.tensorflow.org/tutorials/images/classification)
